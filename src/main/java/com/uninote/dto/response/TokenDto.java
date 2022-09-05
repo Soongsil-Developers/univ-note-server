@@ -1,4 +1,4 @@
-package com.uninote.domain;
+package com.uninote.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

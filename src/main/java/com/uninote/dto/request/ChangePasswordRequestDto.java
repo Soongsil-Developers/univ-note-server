@@ -1,4 +1,4 @@
-package com.uninote.request;
+package com.uninote.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

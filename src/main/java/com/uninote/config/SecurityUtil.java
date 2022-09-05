@@ -1,4 +1,4 @@
-package com.uninote.Config;
+package com.uninote.config;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

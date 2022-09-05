@@ -1,4 +1,4 @@
-package com.uninote.Config;
+package com.uninote.config;
 
 import com.uninote.jwt.JwtAccessDeniedHandler;
 import com.uninote.jwt.JwtAuthenticationEntryPoint;

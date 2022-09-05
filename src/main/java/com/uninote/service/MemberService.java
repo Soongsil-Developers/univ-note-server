@@ -1,10 +1,9 @@
 package com.uninote.service;
 
-import com.uninote.Config.SecurityUtil;
+import com.uninote.config.SecurityUtil;
 import com.uninote.domain.Member;
 import com.uninote.repository.MemberRepository;
-import com.uninote.response.MemberResponseDto;
-import lombok.Getter;
+import com.uninote.dto.response.MemberResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

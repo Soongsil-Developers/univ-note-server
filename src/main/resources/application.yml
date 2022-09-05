@@ -13,4 +13,4 @@ logging:
     com.tutorial: debug
 
 jwt:
-  secret:
+  secret: abcdefgadsadsadadsadsacascascsacsavafewafwafawefewfewafewfewafewf

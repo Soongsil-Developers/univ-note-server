@@ -1,4 +1,4 @@
-package com.uninote.Config;
+package com.uninote.config;
 
 import com.uninote.jwt.JwtFilter;
 import com.uninote.jwt.TokenProvider;

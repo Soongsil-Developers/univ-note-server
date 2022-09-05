@@ -1,11 +1,11 @@
 package com.uninote.service;
 
 import com.uninote.domain.Member;
-import com.uninote.domain.TokenDto;
+import com.uninote.dto.response.TokenDto;
 import com.uninote.jwt.TokenProvider;
 import com.uninote.repository.MemberRepository;
-import com.uninote.request.MemberRequestDto;
-import com.uninote.response.MemberResponseDto;
+import com.uninote.dto.request.MemberRequestDto;
+import com.uninote.dto.response.MemberResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

@@ -1,8 +1,8 @@
 package com.uninote.controller;
 
-import com.uninote.request.ChangePasswordRequestDto;
-import com.uninote.request.MemberRequestDto;
-import com.uninote.response.MemberResponseDto;
+import com.uninote.dto.request.ChangePasswordRequestDto;
+import com.uninote.dto.request.MemberRequestDto;
+import com.uninote.dto.response.MemberResponseDto;
 import com.uninote.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

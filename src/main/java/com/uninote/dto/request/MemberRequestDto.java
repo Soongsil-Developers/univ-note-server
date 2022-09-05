@@ -1,4 +1,4 @@
-package com.uninote.request;
+package com.uninote.dto.request;
 
 import com.uninote.domain.Authority;
 import com.uninote.domain.Member;
