@@ -1,0 +1,16 @@
+spring:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+logging:
+  level:
+    com.tutorial: debug
+
+jwt:
+  secret: abcdefgadsadsadadsadsacascascsacsavafewafwafawefewfewafewfewafewf
