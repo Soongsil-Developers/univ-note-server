@@ -41,4 +41,15 @@ public class Note extends BaseTimeEntity {
         this.bookMark = bookMark;
         this.member = member;
     }
+
+    public NoteEditor.NoteEditorBuilder toEditor() {
+        return NoteEditor.builder()
+                .title(title)
+                .content(content);
+    }
+
+    public void edit(NoteEditor noteEditor) {
+        title = noteEditor.getTitle();
+        content = noteEditor.getContent();
+    }
 }

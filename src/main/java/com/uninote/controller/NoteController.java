@@ -1,6 +1,8 @@
 package com.uninote.controller;
 
 import com.uninote.dto.request.NoteCreate;
+import com.uninote.dto.request.NoteEdit;
+import com.uninote.dto.response.NoteResponse;
 import com.uninote.service.NoteService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +24,16 @@ public class NoteController {
 
     @DeleteMapping("/delete/{noteId}")
     public void delete(@PathVariable Long noteId) {
-//        noteService.delete(noteId);
+        noteService.delete(noteId);
     }
 
+    @GetMapping("/posts/{noteId}")
+    public NoteResponse get(@PathVariable Long noteId) {
+        return noteService.get(noteId);
+    }
+
+    @PatchMapping("/posts/{noteId}")
+    public void edit(@PathVariable Long noteId, @RequestBody @Valid NoteEdit request) {
+        noteService.edit(noteId, request);
+    }
 }
