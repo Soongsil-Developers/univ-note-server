@@ -4,6 +4,7 @@ import com.uninote.domain.BookMark;
 import com.uninote.domain.Member;
 import com.uninote.domain.Note;
 import com.uninote.dto.request.NoteCreate;
+import com.uninote.repository.MemberRepository;
 import com.uninote.repository.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,12 +20,13 @@ import java.util.Optional;
 public class NoteService {
 
     private final NoteRepository noteRepository;
+    private final MemberRepository memberRepository;
 
     public void write(NoteCreate noteCreate) {
 
         Authentication loggedInUser = SecurityContextHolder.getContext().getAuthentication();
         String username = loggedInUser.getName();
-        Optional<Member> memberByNickname = noteRepository.findMemberByNickname(username);
+        Optional<Member> memberByNickname = memberRepository.findMemberByNickname(username);
         Member findMember = memberByNickname.get();
 
         Note note = Note.builder()

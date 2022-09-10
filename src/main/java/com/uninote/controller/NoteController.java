@@ -19,6 +19,10 @@ public class NoteController {
     public void post(@RequestBody @Valid NoteCreate request) {
         noteService.write(request);
     }
-    
+
+    @DeleteMapping("/delete/{noteId}")
+    public void delete(@PathVariable Long noteId) {
+//        noteService.delete(noteId);
+    }
 
 }
