@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -13,6 +15,7 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "member_id")
     private Long id;
 
     @Column(nullable = false)
@@ -32,6 +35,9 @@ public class Member {
     }
 
     public void setPassword(String password) { this.password = password; }
+
+    @OneToMany(mappedBy = "member")
+    private List<Note> note = new ArrayList<>();
 
     @Builder
     public Member(Long id, String email, String password, String nickname, Authority authority) {
