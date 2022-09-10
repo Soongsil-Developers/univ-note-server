@@ -4,6 +4,7 @@ import com.uninote.domain.BookMark;
 import com.uninote.domain.Member;
 import com.uninote.domain.Note;
 import com.uninote.dto.request.NoteCreate;
+import com.uninote.exception.NoteNotFound;
 import com.uninote.repository.MemberRepository;
 import com.uninote.repository.NoteRepository;
 import lombok.RequiredArgsConstructor;
@@ -39,5 +40,12 @@ public class NoteService {
                 .build();
 
         noteRepository.save(note);
+    }
+
+    public void delete(Long id) {
+        Note note = noteRepository.findById(id)
+                .orElseThrow(NoteNotFound::new);
+
+        noteRepository.delete(note);
     }
 }
