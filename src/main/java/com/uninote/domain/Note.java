@@ -20,7 +20,7 @@ public class Note extends BaseTimeEntity {
     private String title;
 
     @Lob
-    private String contents;
+    private String content;
 
     private String mainCategory;
     private String subCategory;
@@ -33,9 +33,9 @@ public class Note extends BaseTimeEntity {
     private Member member;
 
     @Builder
-    public Note(String title, String contents, String mainCategory, String subCategory, BookMark bookMark, Member member) {
+    public Note(String title, String content, String mainCategory, String subCategory, BookMark bookMark, Member member) {
         this.title = title;
-        this.contents = contents;
+        this.content = content;
         this.mainCategory = mainCategory;
         this.subCategory = subCategory;
         this.bookMark = bookMark;
